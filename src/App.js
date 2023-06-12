@@ -1,6 +1,15 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
+import Logout from "./pages/logout/Logout";
 import List from "./pages/list/List";
+import ProductList from "./pages/products/ProductList";
+import DeliveryList from "./pages/delivery/DeliveryList";
+import OrderList from "./pages/orders/OrderList";
+import Stat from "./pages/stats/Stat";
+import NotificationPage from "./pages/notifications/NotificationPage";
+import LogsPage from "./pages/logs/LogsPage";
+import ServiceHealth from "./pages/serviceHealth/ServiceHealth";
+import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -27,14 +36,17 @@ function App() {
                 element={<New inputs={userInputs} title="Add New User" />}
               />
             </Route>
-            <Route path="products">
-              <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={productInputs} title="Add New Product" />}
-              />
-            </Route>
+            <Route path="products" element={<ProductList />} />
+            <Route path="deliveries" element={<DeliveryList />} />
+            <Route path="orders" element={<OrderList />} />
+            <Route path="stats" element={<Stat />} />
+            <Route path="notifications" element={<NotificationPage />} />
+            <Route path="logs" element={<LogsPage />} />
+            <Route path="service-health" element={<ServiceHealth />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="profile" element={<Single />} />
+
+            <Route path="logout" element={<Logout />} />
           </Route>
         </Routes>
       </BrowserRouter>

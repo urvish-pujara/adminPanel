@@ -4,7 +4,9 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
-
+import DeveloperBoardOutlinedIcon from "@mui/icons-material/DeveloperBoardOutlined";
+import MemoryOutlinedIcon from "@mui/icons-material/MemoryOutlined";
+import SignalCellularAltOutlinedIcon from "@mui/icons-material/SignalCellularAltOutlined";
 const Widget = ({ type }) => {
   let data;
 
@@ -69,6 +71,55 @@ const Widget = ({ type }) => {
             style={{
               backgroundColor: "rgba(128, 0, 128, 0.2)",
               color: "purple",
+            }}
+          />
+        ),
+      };
+      break;
+
+    case "cpu":
+      data = {
+        title: "CPU USAGE",
+        isMoney: false,
+        link: "View CPU details",
+        icon: (
+          <DeveloperBoardOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(0, 0, 255, 0.2)",
+              color: "blue",
+            }}
+          />
+        ),
+      };
+      break;
+    case "memory":
+      data = {
+        title: "MEMORY USAGE",
+        isMoney: false,
+        link: "View memory details",
+        icon: (
+          <MemoryOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(255, 165, 0, 0.2)",
+              color: "orange",
+            }}
+          />
+        ),
+      };
+      break;
+    case "network":
+      data = {
+        title: "NETWORK STATUS",
+        isMoney: false,
+        link: "View network details",
+        icon: (
+          <SignalCellularAltOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(255, 0, 255, 0.2)",
+              color: "magenta",
             }}
           />
         ),

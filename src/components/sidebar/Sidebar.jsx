@@ -28,10 +28,13 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
+
+          <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
+          </Link>
           <p className="title">LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
@@ -45,45 +48,71 @@ const Sidebar = () => {
               <span>Products</span>
             </li>
           </Link>
+
+          <Link to="/orders" style={{ textDecoration: "none" }}>
           <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
           </li>
+          </Link>
+
+          <Link to="/deliveries" style={{ textDecoration: "none" }}>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
+          </Link>
+          
           <p className="title">USEFUL</p>
+
+          <Link to="/stats" style={{ textDecoration: "none" }}>
           <li>
             <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
+          </Link>
+          
+          <Link to="/notifications" style={{ textDecoration: "none" }}>
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
+          </Link>
           <p className="title">SERVICE</p>
+          <Link to="/service-health" style={{ textDecoration: "none" }}>
           <li>
             <SettingsSystemDaydreamOutlinedIcon className="icon" />
             <span>System Health</span>
           </li>
+          </Link>
+
+          <Link to="/logs" style={{ textDecoration: "none" }}>
           <li>
             <PsychologyOutlinedIcon className="icon" />
             <span>Logs</span>
           </li>
+          </Link>
+
+          <Link to="/settings" style={{ textDecoration: "none" }}>
           <li>
             <SettingsApplicationsIcon className="icon" />
             <span>Settings</span>
           </li>
+          </Link>
           <p className="title">USER</p>
+
+          <Link to="/profile" style={{ textDecoration: "none" }}>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
+          </Link>
+          <Link to="/logout" style={{ textDecoration: "none" }}>
           <li>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
+          </Link>
         </ul>
       </div>
       <div className="bottom">
